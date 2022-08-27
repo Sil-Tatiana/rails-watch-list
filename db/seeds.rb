@@ -6,8 +6,8 @@
   movie = Movie.new(
     title: Faker::Movie.title,
     overview: Faker::Quote.yoda,
-    poster_url: 'https://source.unsplash.com/random/1920x1080/?arcade-games',
-    rating: Faker::Number.between(from: 1.0, to: 5.0)
+    poster_url: 'https://source.unsplash.com/random/220x220/?arcade-games',
+    rating: Faker::Number.between(from: 1, to: 5)
   )
   movie.save!
 end
