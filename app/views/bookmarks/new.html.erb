@@ -1,7 +1,35 @@
-<h1>Bookmarks</h1>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><i class="fa-solid fa-clapperboard"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto me-5">
+        <li class="nav-item ">
+          <a class="nav-link" href="#">My list</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">New List + </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-  <%= f.button :submit %>
-<% end %>
+  <div class="bg-dark text-secondary px-4 py-5 text-left">
+    <div class="py-5">
+    <h1 class="display-5 fw-bold text-white">Bookmarks</h1>
+    <h3 class="fst-italic text-white">Add a movie to the <%= @list.name.capitalize %> List</h3>
+    <div class="container">
+      <div class="form-inputs mb-3">
+        <%= f.input :comment %>
+      </div>
+        <%= f.association :movie %>
+      <div class="btn btn-light mt-3">
+        <%= f.button :submit %>
+      </div>
+      <% end %>
+    </div>
+  </div>
