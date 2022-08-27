@@ -1,7 +1,33 @@
-<h1>Movies Lists</h1>
 
-<ul>
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Movies Lists</a>
+  </div>
+</nav>
+<div class="bg-dark text-secondary px-4 py-5 text-center">
+  <div class="py-5">
+    <h1 class="display-5 fw-bold text-white">Your Movies Lists</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="fs-5 mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    </div>
+  </div>
+</div>
+<div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom">Custom Lists</h2>
+
+<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
   <% @lists.each do |list| %>
-    <li><%= list.name.capitalize %></li>
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://images.unsplash.com/photo-1495121553079-4c61bcce1894?ixlib&w=500&h=560&q=80')">
+        <%# <a href="http://[::1]:3000/lists/3"></a> %>
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+            <%= list.name.capitalize %>
+          </h2>
+          <ul class="d-flex list-unstyled mt-auto">
+          </ul>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
